@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text color for readability */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f39c12; /* Golden yellow color */
+    text-shadow: 0px 0px 10px rgba(243, 156, 18, 0.8);
+}
+
+/* Container to center cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Light Card Styling */
+.card {
+    background: #ecf0f1; /* Light card color */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #2c3e50; /* Dark text color inside light card */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(243, 156, 18, 0.2); /* Soft golden shadow on hover */
+}
+
+/* Gadget Image */
+.gadget-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect on images */
+.card:hover .gadget-image {
+    transform: scale(1.1);
+}
+
+/* Brand text container */
+.brand-container {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+/* Brand Logo Styling with round/square background */
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    vertical-align: middle;
+    object-fit: contain;
+    
+    /* Circular background around the logo */
+    background-color: #ecf0f1; /* Light background color */
+    border-radius: 50%; /* For round shape, use 50% */
+    padding: 10px; /* Adds space around the logo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for effect */
+}
+
+
+/* Price Styling */
+.price {
+    font-weight: bold;
+    color: #27ae60; /* Green price for good deals */
+    font-size: 1.2em;
+    text-shadow: 0px 0px 8px rgba(39, 174, 96, 0.8);
+}
+
+/* Expensive items in red */
+.expensive {
+    color: #e74c3c; /* Red for expensive items */
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(231, 76, 60, 0.8);
+}
+
+/* Smooth animations */
+@keyframes glow {
+    0% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3); }
+    50% { text-shadow: 0px 0px 20px rgba(243, 156, 18, 0.7); }
+    100% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3); }
+}
+
+h1 {
+    animation: glow 2s infinite alternate;
+}
